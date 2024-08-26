@@ -113,3 +113,15 @@ Create a test class for registration testing:
 ```bash
 php artisan dusk:make RegistrationTest
 ```
+#### 2. Running the Test::
+Execute the Dusk tests using:
+
+```bash
+php artisan dusk
+```
+#### 3. If you want to run a specific test case using dusk:
+This specific command will run only the testCreateProduct method within the ProductTest class.
+
+```bash
+php artisan dusk tests/Browser/ProductTest.php --filter testCreateProduct
+```
