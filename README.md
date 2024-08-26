@@ -68,3 +68,48 @@ After installing Dusk, run the install command:
 ```bash
 php artisan dusk:install
 ```
+
+Set Up the Testing Environment:
+Ensure your .env.dusk.local is configured properly to use a test database.
+
+Run database migrations for your test environment:
+
+```bash
+php artisan migrate --env=testing
+```
+
+Step to check current laravel version in my case it is Laravel Framework 11.21.0:
+
+```bash
+php artisan --version
+```
+Step to check current node version in my case it is v22.4.1:
+
+```bash
+node -v
+```
+
+#### 1. Install Laravel Jetstream::
+Use Composer to require Laravel Jetstream into your project:
+
+```bash
+composer require laravel/jetstream
+```
+
+Using Inertia (With Vue.js):
+
+```bash
+php artisan jetstream:install inertia
+```
+
+#### 2. Run NPM Install and Build Assets:
+```bash
+npm install
+npm run dev
+```
+#### 2. Create a Dusk Test:
+Create a test class for registration testing:
+
+```bash
+php artisan dusk:make RegistrationTest
+```
